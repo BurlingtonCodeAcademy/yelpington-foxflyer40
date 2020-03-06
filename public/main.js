@@ -1,6 +1,5 @@
 // get the map - set location and zoom
 let mymap = L.map('map').setView([44.478, -73.211882], 16)
-
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -58,10 +57,20 @@ async function getData(id) {
 				let info = locationInfo[0]
 				let lat = info.lat
 				let lon = info.lon
+				console.log(name)
+				thisPin = L.marker([lat, lon]).addTo(mymap).bindPopup(name)
 
-				let thisPin = L.marker([lat, lon]).addTo(mymap)
+				//When putting mouse on pin, open up content
+				thisPin.on('mouseover', () => {
+					thisPin.openPopup();
+				  });
+				  //When moving mouse off pin, close content
+				  thisPin.on('mouseout', () => {
+					thisPin.closePopup();
+				  });
 
-				thisPin.bindPopup(name).openPopup()
+
+
 
 			})
 	}
