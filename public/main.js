@@ -1,5 +1,5 @@
 // get the map - set location and zoom
-let mymap = L.map('map').setView([44.475962, -73.211882], 16)
+let mymap = L.map('map').setView([44.478, -73.211882], 16)
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
@@ -44,6 +44,7 @@ async function getData(id) {
 
 		listContainer.innerHTML += `<li><a href='/post/${id}'>${name}</a></li>`
 		getLatLon(address)
+		
 	})
 
 	// put pins on map
@@ -58,9 +59,9 @@ async function getData(id) {
 				let lat = info.lat
 				let lon = info.lon
 
-				let pinPopUp = L.marker([lat, lon]).addTo(mymap)
+				let thisPin = L.marker([lat, lon]).addTo(mymap)
 
-				marker.bindPopup('name').openPopup()
+				thisPin.bindPopup(name).openPopup()
 
 			})
 	}
