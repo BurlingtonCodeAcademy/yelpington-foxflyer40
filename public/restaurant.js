@@ -42,6 +42,9 @@ async function getRest(id) {
 	getLatLon(restItem.address)
 
 }
+
+getRest(id)
+
 async function getLatLon(address) {
 	let pinLocation = await fetch(`https://nominatim.openstreetmap.org/search/?q=${address}&format=json`)
 		.then((data) => {
@@ -70,15 +73,8 @@ async function getLatLon(address) {
 			thisPin.on('mouseout', () => {
 				thisPin.closePopup()
 			})
-
-
-			
-			
-
-
-
 		})
 }
-getRest(id)
+
 
 

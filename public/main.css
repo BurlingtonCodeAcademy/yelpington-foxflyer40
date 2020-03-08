@@ -1,0 +1,135 @@
+/**** Header  *****/
+  
+    #header {
+        display: flex;
+        color: orangered;
+        justify-content: center;
+        border: solid;
+        border-color: orangered;
+        border-width: 2px;
+        border-radius: 25px;
+        background-color: deepskyblue;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /********* middle container for sidebar and map ********/
+    .middleContainer {
+        display: flex;
+            }
+    /*********** sidebar **********/
+    nav {
+        display: flex;
+        order: 1;
+        height: 50vh;
+        width: 24vw;
+        color: orangered;
+        justify-content: center;
+        border: solid;
+        border-color: orangered;
+        border-width: 2px;
+        border-radius: 25px;
+        background-color: deepskyblue;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /********* Map section**********/
+    #map {
+        display: flex;
+        order: 2;
+        height: 50vh;
+        width: 74vw;
+        border: solid;
+        border-color: orangered;
+        border-width: 2px;
+        border-radius: 25px;
+    }
+    /********** Footer  *************/
+  
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(1fr);
+        grid-gap: 1rem;
+        grid-template-areas: "footerTitle       footerTitle        footerTitle      footerTitle" "footerTitle       footerTitle        footerTitle      footerTitle" "footerTitle       footerTitle        footerTitle      footerTitle" "footerTitle       footerTitle        footerTitle      footerTitle" "formSection       formSection        footerText       footerText" "formSection       formSection        footerText       footerText" "formSection       formSection        footerAddress    footerTwitter" "formSection       formSection        footerAddress    footerInstagram" "formSection       formSection        footerPhone      footerWebsite" "formSection       formSection        footerEmail      footerFacebook";
+    }
+    .footerTitle {
+        grid-area: footerTitle;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-top: 2em;
+    }
+    #footerTitleBold {
+        font-weight: bold;
+    }
+    .footerText {
+        grid-area: footerText;
+    }
+    .footerAddress {
+        grid-area: footerAddress;
+        justify-content: center;
+    }
+    .footerPhone {
+        grid-area: footerPhone;
+    }
+    .footerEmail {
+        grid-area: footerEmail;
+    }
+    .footerTwitter {
+        grid-area: footerTwitter;
+    }
+    .footerInstagram {
+        grid-area: footerInstagram;
+    }
+    .footerWebsite {
+        grid-area: footerWebsite;
+    }
+    .footerFacebook {
+        grid-area: footerFacebook;
+    }
+    /****form styling*****/
+    input[type=text], select, textarea {
+        width: 96%;
+        /* Full width */
+        padding: 12px;
+        /* Some padding */
+        border: 1px solid;
+        /* Gray border */
+        border-radius: 4px;
+        /* Rounded borders */
+        box-sizing: border-box;
+        /* Make sure that padding and width stays in place */
+        margin-top: 6px;
+        /* Add a top margin */
+        margin-bottom: 16px;
+        /* Bottom margin */
+        resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+    #fname {
+        width: 48%;
+    }
+    #email {
+        width: 48%;
+    }
+    /* Style the submit button with a specific background color etc */
+    /* input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+    /* When moving the mouse over the submit button, add a darker green color */
+    .submitButton {
+        background-color: cornflowerblue;
+        border: #002633;
+    }
+    .submitButton:hover {
+        border: none;
+        background-color: #008080;
+    }
+    /* Add a background color and some padding around the form */
+    .formSection {
+        grid-area: formSection;
+        border-radius: 5px;
+        padding: 20px;
+    }
