@@ -5,17 +5,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap)
 
-// DISABLED Used for verifiction - this shows lat lon at wherever on the map you click
-// let popup = L.popup();
-// function onMapClick(e) {
-// 	popup
-// 		.setLatLng(e.latlng)
-// 		.setContent("You clicked the map at " + e.latlng.toString())
-// 		.openOn(mymap);
-// }
-// mymap.on('click', onMapClick);
-// get id and fetch json data
-
 let path = window.location.pathname
 let pathArray = path.split('/')
 let id = pathArray.pop()
