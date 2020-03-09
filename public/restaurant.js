@@ -1,20 +1,7 @@
-
-
-// let popup = L.popup();
-
-// function onMapClick(e) {
-// 	popup
-// 		.setLatLng(e.latlng)
-// 		.setContent("You clicked the map at " + e.latlng.toString())
-// 		.openOn(mymap);
-// }
-
-// mymap.on('click', onMapClick);
-
-
 let path = window.location.pathname
 let pathArray = path.split('/')
 let id = pathArray.pop()
+//let restId = document.getElementById('id')
 let name = document.getElementById('name')
 let address = document.getElementById('address')
 let phone = document.getElementById('phone')
@@ -32,20 +19,21 @@ async function getRest(id) {
 			return dataJson
 		})
 
-	restId.textContent += restItem.id
-	name.textContent += restItem.name
-	address.textContent += restItem.address
-	phone.textContent += restItem.phone
-	webSite.textContent += restItem.webSite
-	hours.textContent += restItem.hours
-	notes.textContent += restItem.notes
-	getLatLon(restItem.address)
+	restId.textContent = restItem.id
+	name.textContent = restItem.name
+	address.textContent = restItem.address
+	phone.textContent = restItem.phone
+	webSite.textContent = restItem.website
+	hours.textContent = restItem.hours
+	notes.textContent = restItem.notes
+	getLatLon(restItem.address, restItem.website, restItem.name)
+	console.log(restItem.notes)
 
 }
 
 getRest(id)
 
-async function getLatLon(address) {
+async function getLatLon(address, website, name) {
 	let pinLocation = await fetch(`https://nominatim.openstreetmap.org/search/?q=${address}&format=json`)
 		.then((data) => {
 			return data.json()
@@ -54,7 +42,7 @@ async function getLatLon(address) {
 			let info = locationInfo[0]
 			let lat = info.lat
 			let lon = info.lon
-
+			let restWeb = website
 
 			let mymap = L.map('map').setView([lat, lon], 16)
 
@@ -63,16 +51,19 @@ async function getLatLon(address) {
 				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 			}).addTo(mymap)
 
-			let thisPin = L.marker([lat, lon]).addTo(mymap).bindPopup(name)
+			let thisPin = L.marker([lat, lon]).addTo(mymap).bindPopup('Click to go to ' + name + ' website').openPopup()
 
-			//popup on hover
+			// popup on hover
 			// thisPin.on('mouseover', () => {
-				thisPin.openPopup()
+			// 	thisPin.openPopup()
 			// })
-			// //When moving mouse off pin, close content
+			//When moving mouse off pin, close content
 			// thisPin.on('mouseout', () => {
 			// 	thisPin.closePopup()
 			// })
+			thisPin.on('click', () => {
+				window.open(restWeb);
+			});
 		})
 }
 

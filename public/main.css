@@ -29,6 +29,7 @@
         width: 24vw;
         color: orangered;
         justify-content: center;
+        align-content: left;
         border: solid;
         border-color: orangered;
         border-width: 2px;
@@ -48,6 +49,24 @@
         border-width: 2px;
         border-radius: 25px;
     }
+
+/***********Comment section *********/
+#notes {
+    display: flex;
+    color: orangered;
+    justify-content: center;
+    border: solid;
+    border-color: orangered;
+    border-width: 2px;
+    border-radius: 25px;
+    background-color: deepskyblue;
+    margin-top: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
     /********** Footer  *************/
   
     .footer {
