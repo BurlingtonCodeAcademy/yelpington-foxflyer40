@@ -8,7 +8,7 @@ let phone = document.getElementById('phone')
 let website = document.getElementById('webSite')
 let hours = document.getElementById('hours')
 let notes = document.getElementById('notes')
-
+let noteContainer = document.getElementById('noteList')
 
 async function getRest(id) {
 	let restItem = await fetch(`https://json-server.burlingtoncodeacademy.now.sh/restaurants/${id}`)
@@ -25,7 +25,14 @@ async function getRest(id) {
 	phone.textContent = restItem.phone
 	webSite.textContent = restItem.website
 	hours.textContent = restItem.hours
-	notes.textContent = restItem.notes
+	
+
+
+	restItem.notes.forEach(element => {
+		noteContainer.innerHTML += `<li>${element}</li>`
+	});
+	
+
 	getLatLon(restItem.address, restItem.website, restItem.name)
 	console.log(restItem.notes)
 
