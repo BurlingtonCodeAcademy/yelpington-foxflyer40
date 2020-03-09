@@ -66,13 +66,13 @@ async function getLatLon(address) {
 			let thisPin = L.marker([lat, lon]).addTo(mymap).bindPopup(name)
 
 			//popup on hover
-			thisPin.on('mouseover', () => {
+			// thisPin.on('mouseover', () => {
 				thisPin.openPopup()
-			})
-			//When moving mouse off pin, close content
-			thisPin.on('mouseout', () => {
-				thisPin.closePopup()
-			})
+			// })
+			// //When moving mouse off pin, close content
+			// thisPin.on('mouseout', () => {
+			// 	thisPin.closePopup()
+			// })
 		})
 }
 
