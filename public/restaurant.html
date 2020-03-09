@@ -23,71 +23,75 @@
             <h1>Yelpington</h1>
       </div>
 
-      <div id='map'></div>
+      <div class="middleContainer">
+
+            <div id='map'></div>
+
+            <nav>
+                  <ul>
+                        <li id="restId">Id: </li>
+
+                        <li id="name">Name: </li>
+
+                        <li id="address">Address: </li>
+
+                        <li id="phone">Phone: </li>
+
+                        <li id="webSite">Web Site: </li>
+
+                        <li id="hours">Hours: </li>
+
+                        <li id="notes">Comments: </li>
+
+                  </ul>
+            </nav>
+      </div>
+      <!--  Footer section  -->
 
 
-<ul>
-      <li id="restId">Id: </li>
+      <div class="footer">
+            <div class="footerTitle">QUESTIONS OR COMMENTS? <SPAN id="footerTitleBold">GET IN TOUCH:</SPAN>
+            </div>
 
-      <li id="name">Name: </li>
+            <div class="formSection">
+                  <form action="action_page.php">
+                        <div>
+                              <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                              <input type="text" id="email" name="lastname" placeholder="Your email" required>
+                        </div>
+                        <label class="subject" for="subject"></label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                              style="height:200px"></textarea>
+                        <input type="submit" class="submitButton" value="Submit">
 
-      <li id="address">Address: </li>
+            </div>
+            <div class="footerItem footerText">
+            </div>
 
-      <li id="phone">Phone: </li>
+            <div class="footerMediaLink footerAddress">
+                  <a><i class="fas fa-home"></i> 1235 Main St.<br />Any Old Town<br />My
+                        State<br />65432</a>
+            </div>
+            <div class="footerMediaLink footerPhone"> <a><i class="fas fa-phone"></i> 802.123.9876</a>
+            </div>
+            <div class="footerMediaLink footerEmail"> <a><i class="fas fa-envelope"></i></a>
+                  info@makersunion.cominfo@makersunion.com
+            </div>
+            <div class="footerMediaLink footerTwitter"> <a><i class="fab fa-twitter"></i> #MakerShmaker</a>
+            </div>
+            <div class="footerMediaLink footerInstagram"> <a><i class="fab fa-instagram"></i>
+                        makersunited</a>
+            </div>
+            <div class="footerMediaLink footerWebsite"> <a><i class="fas fa-globe"></i> makershmaker.com</a>
+            </div>
+            <div class="footerMediaLink footerFacebook"> <a><i class="fab fa-facebook"></i> Makers</a>
+            </div>
 
-      <li id="webSite">Web Site: </li>
 
-      <li id="hours">Hours: </li>
 
-      <li id="notes">Comments: </li>
-      
-</ul>
-
-    <!--  Footer section  -->
-    
-
-    <div class="footer">
-      <div class="footerTitle">QUESTIONS OR COMMENTS? <SPAN id="footerTitleBold">GET IN TOUCH:</SPAN>
       </div>
 
-      <div class="formSection">
-        <form action="action_page.php">
-          <div>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-            <input type="text" id="email" name="lastname" placeholder="Your email" required>
-          </div>
-          <label class="subject" for="subject"></label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          <input type="submit" class="submitButton" value="Submit">
-
-      </div>
-      <div class="footerItem footerText">
-      </div>
-
-      <div class="footerMediaLink footerAddress">
-        <a><i class="fas fa-home"></i> 1235 Main St.<br />Any Old Town<br />My
-          State<br />65432</a>
-      </div>
-      <div class="footerMediaLink footerPhone"> <a><i class="fas fa-phone"></i> 802.123.9876</a>
-      </div>
-      <div class="footerMediaLink footerEmail"> <a><i class="fas fa-envelope"></i></a>
-        info@makersunion.cominfo@makersunion.com
-      </div>
-      <div class="footerMediaLink footerTwitter"> <a><i class="fab fa-twitter"></i> #MakerShmaker</a>
-      </div>
-      <div class="footerMediaLink footerInstagram"> <a><i class="fab fa-instagram"></i>
-          makersunited</a>
-      </div>
-      <div class="footerMediaLink footerWebsite"> <a><i class="fas fa-globe"></i> makershmaker.com</a>
-      </div>
-      <div class="footerMediaLink footerFacebook"> <a><i class="fab fa-facebook"></i> Makers</a>
-      </div>
-
-
-
-    </div>
-
-<script src="../restaurant.js"></script>
+      <script src="../restaurant.js"></script>
 </body>
 
 </html>

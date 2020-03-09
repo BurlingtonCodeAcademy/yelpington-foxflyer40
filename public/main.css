@@ -9,6 +9,7 @@
         border-width: 2px;
         border-radius: 25px;
         background-color: deepskyblue;
+        margin-bottom: 1em;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     /********* middle container for sidebar and map ********/
@@ -28,6 +29,7 @@
         border-width: 2px;
         border-radius: 25px;
         background-color: deepskyblue;
+        margin-right: 1em;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     /********* Map section**********/
@@ -49,6 +51,12 @@
         grid-template-rows: repeat(1fr);
         grid-gap: 1rem;
         grid-template-areas: "footerTitle       footerTitle        footerTitle      footerTitle" "footerTitle       footerTitle        footerTitle      footerTitle" "footerTitle       footerTitle        footerTitle      footerTitle" "footerTitle       footerTitle        footerTitle      footerTitle" "formSection       formSection        footerText       footerText" "formSection       formSection        footerText       footerText" "formSection       formSection        footerAddress    footerTwitter" "formSection       formSection        footerAddress    footerInstagram" "formSection       formSection        footerPhone      footerWebsite" "formSection       formSection        footerEmail      footerFacebook";
+        border: solid;
+        border-color: orangered;
+        border-width: 2px;
+        border-radius: 25px;
+        background-color: deepskyblue;
+        margin-top: 1em;
     }
     .footerTitle {
         grid-area: footerTitle;
