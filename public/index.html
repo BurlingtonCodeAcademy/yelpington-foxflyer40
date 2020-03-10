@@ -16,42 +16,36 @@
 </head>
 
 <body>
-
-
   <!--  Header section  -->
-
   <div id="header">
     <h1>Yelpington</h1>
   </div>
 
-
   <!--  center section for sidebar and map  -->
   <div class="middleContainer">
-
+    <!--  Map  -->
     <div id='map'></div>
-
+    <!--  SideBar  -->
     <nav>
       <ol id='idList'></ol> <!--  Ordered list to recieve list items for side bar  -->
       <script src="main.js"></script> <!--  connect to javascript file  -->
-
     </nav>
-
   </div>
 
   <!--  Footer section  -->
   <div class="footer">
     <div class="footerTitle">QUESTIONS OR COMMENTS? <SPAN id="footerTitleBold"> GET IN TOUCH:</SPAN>
     </div>
-
+    <!-- Footer form section  -->
     <div class="formSection">
-      <form action="action_page.php">
-        <div>
+          <div>
           <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
           <input type="text" id="email" name="lastname" placeholder="Your email" required>
         </div>
         <input type="text" id="subject" name="subject" placeholder="Write something.." style="height:150px">
         <input type="submit" class="submitButton" value="Submit">
     </div>
+    <!--  Footer link section  -->
     <div class="footerMediaLink footerAddress">
       <a><i class="fas fa-home"></i> 1235 Main St.<br />Any Old Town<br />My
         State<br />65432</a>
