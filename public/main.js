@@ -25,11 +25,7 @@ async function getData(id) {
 		let id = post.id
 		let name = post.name
 		let address = post.address
-		let phone = post.phone
-		let webSite = post.webSite
-		let hours = post.hours
-		let notes = post.notes
-
+		
 		listContainer.innerHTML += `<li><a href='/post/${id}'>${name}</a></li>`
 		getLatLon(address, id)
 
