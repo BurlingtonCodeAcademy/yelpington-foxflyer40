@@ -25,40 +25,40 @@ async function getData(id) {
 		let id = post.id
 		let name = post.name
 		let address = post.address
-		
+
 		listContainer.innerHTML += `<li><a href='/post/${id}'>${name}</a></li>`
 		getLatLon(address, id)
-
-		// put pins on map
-		async function getLatLon(address, restId) {
-
-			let pinLocation = await fetch(`https://nominatim.openstreetmap.org/search/?q=${address}&format=json`)
-				.then((data) => {
-					return data.json()
-				})
-				.then((locationInfo) => {
-					let info = locationInfo[0]
-					let lat = info.lat
-					let lon = info.lon
-					
-					let thisPin = L.marker([lat, lon]).addTo(mymap).bindPopup(name)
-
-					//popup on hover
-					thisPin.on('mouseover', () => {
-						thisPin.openPopup()
-					})
-					//When moving mouse off pin, close content
-					thisPin.on('mouseout', () => {
-						thisPin.closePopup()
-					})
-
-					thisPin.on('click', () => {
-						window.location = `/post/${restId}`;
-					  });
-					
-
-
-				})
-		}
 	})
-} 
+}
+
+// put pins on map
+async function getLatLon(address, restId) {
+
+	let pinLocation = await fetch(`https://nominatim.openstreetmap.org/search/?q=${address}&format=json`)
+		.then((data) => {
+			return data.json()
+		})
+		.then((locationInfo) => {
+			let info = locationInfo[0]
+			let lat = info.lat
+			let lon = info.lon
+
+			let thisPin = L.marker([lat, lon]).addTo(mymap).bindPopup(name)
+
+			//popup on hover
+			thisPin.on('mouseover', () => {
+				thisPin.openPopup()
+			})
+			//When moving mouse off pin, close content
+			thisPin.on('mouseout', () => {
+				thisPin.closePopup()
+			})
+
+			thisPin.on('click', () => {
+				window.location = `/post/${restId}`;
+			});
+
+
+
+		})
+}

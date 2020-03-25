@@ -24,10 +24,8 @@ async function getRest(id) {
 	address.textContent = restItem.address
 	phone.textContent = restItem.phone
 	webSite.textContent = restItem.website
-	hours.textContent = restItem.hours
+	hours.textContent = restItem.hours || 'Hours not available.'
 	
-
-
 	restItem.notes.forEach(element => {
 		noteContainer.innerHTML += `<li>${element}</li>`
 	});
