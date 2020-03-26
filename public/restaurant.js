@@ -71,6 +71,3 @@ async function getLatLon(address, website, name) {
 			});
 		})
 }
-
-
-
